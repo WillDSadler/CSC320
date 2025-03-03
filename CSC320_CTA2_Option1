@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class CS320_CTA2_Option1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter coupon amount (decimal, e.g., 0.10): ");
+        double coupon = Math.min(Math.max(scanner.nextDouble(), 0), 1);
+        double totalMonthly = 0;
+        for (int i = 1; i <= 4; i++) {
+            System.out.print("Enter the grocery bill for week " + i + ": ");
+            totalMonthly += scanner.nextDouble();
+        }
+        double weeklyAvg = totalMonthly / 4;
+        System.out.printf("Without coupon: $%.2f, Weekly average: $%.2f\n", totalMonthly, weeklyAvg);
+        System.out.printf("With coupon: $%.2f, Weekly average with coupon: $%.2f\n", totalMonthly * (1 - coupon), (totalMonthly * (1 - coupon)) / 4);
+        scanner.close();
+    }
+}
