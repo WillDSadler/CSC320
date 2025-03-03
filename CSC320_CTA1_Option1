@@ -1,0 +1,10 @@
+public class CSC320_CTA1_Option1 {
+    public static void main(String[] args) {
+        // Print Homer Simpson's details
+        System.out.println("Homer");
+        System.out.println("Simpson");
+        System.out.println("742 Evergreen Terrace");
+        System.out.println("Springfield");
+        System.out.println("62704");
+    }
+}
